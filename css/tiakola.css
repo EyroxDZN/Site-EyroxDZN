@@ -1,0 +1,369 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #e6b800;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --dark-bg: #1a1a1a;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* En-tête */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/tiakola-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Section d'introduction */
+.intro-section {
+    background-color: var(--white);
+    padding: 5rem 0;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.intro-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Singles */
+.singles-section {
+    background-color: var(--light-bg);
+    padding: 5rem 0;
+}
+
+.achievements {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.achievement {
+    text-align: center;
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.achievement .count {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.achievement .trophy {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.achievement .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+/* Section Biographie */
+.bio-section {
+    background-color: var(--white);
+    padding: 5rem 0;
+}
+
+.bio-content {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bio-highlights {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.highlight {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.highlight:hover {
+    transform: translateX(5px);
+    background: #f0f0f0;
+}
+
+.highlight .year {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.highlight .event {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Section Albums */
+.albums-section {
+    background-color: var(--light-bg);
+    padding: 5rem 0;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.album {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.album:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.album-cover {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.album-year {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .intro-content,
+    .bio-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .intro-image,
+    .intro-text,
+    .bio-text,
+    .bio-highlights {
+        width: 100%;
+    }
+    
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .achievement {
+        width: 80%;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .album-cover {
+        height: 150px;
+        font-size: 1rem;
+    }
+}

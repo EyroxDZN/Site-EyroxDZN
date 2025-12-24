@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mes projets | Eyrox DZN</title>
+    <meta name="description" content="Découvrez mes créations graphiques sportives : visuels de match, créations pour joueurs et identités de clubs." />
+    <link rel="icon" href="assets/Logo.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 4rem 0;
+      }
+      
+      .project-card {
+        background: #1a1a1a;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .project-card.blur-bg {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .project-card.blur-bg::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background-image: var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        opacity: 0.3;
+        z-index: 0;
+        transform: scale(1.1);
+      }
+      
+      .project-card .project-content {
+        position: relative;
+        z-index: 1;
+        background: rgba(26, 26, 26, 0.8);
+      }
+      
+      .project-image {
+        position: relative;
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        background: #2a2a2a;
+      }
+      
+      .project-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #000;
+      }
+      
+      .project-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      
+      .project-category {
+        display: inline-block;
+        background: #e30613;
+        color: #fff;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .project-title {
+        font-size: 1.5rem;
+        margin: 0 0 0.5rem;
+        color: #fff;
+      }
+      
+      .project-description {
+        color: #aaa;
+        margin: 0;
+        flex-grow: 1;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+      
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .project-coming-soon {
+        opacity: 0.9;
+        background: #2a2a2a;
+      }
+      
+      .project-coming-soon .project-image::after {
+        content: '?';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        color: #444;
+        font-weight: bold;
+      }
+      
+      .project-coming-soon .project-image span {
+        display: none;
+      }
+      
+      .projects-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+      }
+      
+      .projects-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      
+      .projects-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #a0a0a0;
+        margin-bottom: 2rem;
+      }
+      
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .projects-title {
+          font-size: 2rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .projects-title {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="Accueil">
+            <img class="brand-logo" src="assets/Logo.png" alt="Logo Eyrox DZN" />
+            <div class="brand-name">
+              <strong>Eyrox DZN</strong>
+              <span>Graphiste Sportif</span>
+            </div>
+          </a>
+
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="avis.html">Avis clients</a>
+            <a href="a-propos.html">À propos</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="btn btn--primary" href="travaux.html" aria-current="page">Mes projets</a>
+            <button class="icon-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-button>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-panel" data-mobile-panel data-open="false" aria-label="Menu mobile">
+          <a href="index.html">Accueil</a>
+          <a href="avis.html">Avis clients</a>
+          <a href="a-propos.html">À propos</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <div class="container">
+        <div class="projects-intro">
+          <h1 class="projects-title">Mes travaux</h1>
+          <p class="projects-description">Découvrez une sélection de mes projets récents. Chaque création est unique et adaptée aux besoins spécifiques de mes clients, avec une attention particulière portée au détail et à l'impact visuel.</p>
+        </div>
+        
+        <!-- Catégorie Projets Joueurs -->
+        <h2 style="margin: 4rem 0 2rem; font-size: 2rem; color: #fff;">Projets Joueurs</h2>
+        <div class="projects-grid">
+          <!-- Projet Joueur -->
+          <a href="projets/joueur/" class="project-card blur-bg" style="--bg-image: url('projets/joueur/images/Samuel_Eto\'o.png')">
+            <div class="project-image" style="background: #000; display: flex; align-items: center; justify-content: center;">
+              <img src="projets/joueur/images/Samuel_Eto'o.png" alt="Portrait de Samuel Eto'o" style="object-fit: contain; max-height: 100%;" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Portrait</span>
+              <h2 class="project-title">Samuel Eto'o</h2>
+              <p class="project-description">Création d'un portrait visuel de Samuel Eto'o, légende du football africain, mettant en avant son parcours exceptionnel et ses réalisations.</p>
+            </div>
+          </a>
+          
+          <!-- Projet à venir -->
+          <div class="project-card project-coming-soon">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <span class="project-category" style="background: #666; color: #fff;">Bientôt disponible</span>
+              <h2 class="project-title">Projet Joueur</h2>
+              <p class="project-description">Un nouveau projet sera bientôt ajouté à cette section.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Catégorie Social Rebrand -->
+        <h2 style="margin: 4rem 0 2rem; font-size: 2rem; color: #fff;">Social Rebrand</h2>
+        <div class="projects-grid">
+          <!-- Projet Burnley -->
+          <a href="projets/social-rebrand-burnley/" class="project-card">
+            <div class="project-image">
+              <img src="assets/burnley-preview.jpg" alt="Aperçu du projet Social Rebrand Burnley" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Réseaux sociaux</span>
+              <h2 class="project-title">Social Rebrand Burnley</h2>
+              <p class="project-description">Refonte complète de l'identité visuelle pour les réseaux sociaux du Burnley FC, avec une charte graphique moderne et impactante.</p>
+            </div>
+          </a>
+          
+          <!-- Projet à venir -->
+          <div class="project-card project-coming-soon">
+            <div class="project-image" style="background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+              <span style="color: #666; font-size: 1.2rem;">Nouveau projet à venir</span>
+            </div>
+            <div class="project-content">
+              <span class="project-category" style="background: #666;">Bientôt disponible</span>
+              <h2 class="project-title">Projet Social Rebrand</h2>
+              <p class="project-description">Un nouveau projet sera bientôt ajouté à cette section.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Catégorie Matchday -->
+        <h2 style="margin: 4rem 0 2rem; font-size: 2rem; color: #fff;">Matchday</h2>
+        <div class="projects-grid">
+          <!-- Projet à venir -->
+          <div class="project-card project-coming-soon">
+            <div class="project-image" style="background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+              <span style="color: #666; font-size: 1.2rem;">Nouveau projet à venir</span>
+            </div>
+            <div class="project-content">
+              <span class="project-category" style="background: #666;">Bientôt disponible</span>
+              <h2 class="project-title">Projet Matchday</h2>
+              <p class="project-description">Un nouveau projet sera bientôt ajouté à cette section.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Catégorie Hors Sport -->
+        <h2 style="margin: 4rem 0 2rem; font-size: 2rem; color: #fff;">Hors Sport</h2>
+        <div class="projects-grid">
+          <!-- Projet Tiakola -->
+          <a href="#" class="project-card blur-bg" style="--bg-image: url('assets/Tiakola.png');">
+            <div class="project-image">
+              <img src="assets/Tiakola.png" alt="Tiakola">
+            </div>
+            <div class="project-content">
+              <span class="project-category">Musique</span>
+              <h2 class="project-title">Tiakola</h2>
+              <p class="project-description">Création visuelle pour l'artiste Tiakola, mettant en avant son univers musical unique et son style distinctif.</p>
+            </div>
+          </a>
+          
+          <!-- Projet à venir -->
+          <div class="project-card project-coming-soon">
+            <div class="project-image" style="background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+              <span style="color: #666; font-size: 1.2rem;">Nouveau projet à venir</span>
+            </div>
+            <div class="project-content">
+              <span class="project-category" style="background: #666;">Bientôt disponible</span>
+              <h2 class="project-title">Projet Hors Sport</h2>
+              <p class="project-description">Un nouveau projet sera bientôt ajouté à cette section.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <small>© <span id="year"></span> Eyrox DZN. Tous droits réservés.</small>
+          <div class="inline" aria-label="Liens">
+            <a href="avis.html">Avis clients</a>
+            <a href="a-propos.html">À propos</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Script pour gérer le menu mobile
+      const menuButton = document.querySelector('[data-menu-button]');
+      const mobilePanel = document.querySelector('[data-mobile-panel]');
+      
+      if (menuButton && mobilePanel) {
+        menuButton.addEventListener('click', () => {
+          const isOpen = mobilePanel.getAttribute('data-open') === 'true';
+          mobilePanel.setAttribute('data-open', !isOpen);
+          menuButton.setAttribute('aria-expanded', !isOpen);
+        });
+      }
+    </script>
+  </body>
+</html>
