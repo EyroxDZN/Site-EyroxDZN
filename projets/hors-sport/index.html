@@ -3,74 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Eyrox DZN</title>
-    <style>
-        /* Variables */
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-        }
-
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--black);
-            color: var(--white);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            padding: 2.5rem 2rem 0.5rem;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .back-link:hover {
-            opacity: 0.8;
-        }
-
-        .back-link::before {
-            content: '←';
-            position: absolute;
-            left: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .back-link:hover::before {
-            transform: translateX(-5px);
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .coming-soon {
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    </style>
+    <title>Tiakola | Eyrox DZN</title>
+    <link rel="icon" href="images/Logo.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -80,7 +16,64 @@
     </header>
 
     <main>
-        <div class="coming-soon">COMING SOON</div>
+        <div class="project-layout">
+            <div class="project-header">
+                <div class="project-image">
+                    <img src="images/Tiakola.png" alt="Portrait de Tiakola">
+                </div>
+                <div class="header-content">
+                    <h1>Tiakola</h1>
+                    <p class="subtitle">Le Mélomane congolais</p>
+                    <div class="stats-triangle">
+                        <div class="stat-item top-center">
+                            <span class="stat-number">5</span>
+                            <div class="stat-label">
+                                <div>Singles</div>
+                                <div>Diamant</div>
+                            </div>
+                        </div>
+                        <div class="stats-bottom">
+                            <div class="stat-item bottom-left">
+                                <span class="stat-number">4</span>
+                                <div class="stat-label">
+                                    <div>Singles</div>
+                                    <div>Platine</div>
+                                </div>
+                            </div>
+                            <div class="stat-item bottom-right">
+                                <span class="stat-number">3</span>
+                                <div class="stat-label">
+                                    <div>Singles</div>
+                                    <div>Or</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                    <h2>Présentation</h2>
+                    <p>William Mundala, plus connu sous le nom de Tiakola, est un rappeur et auteur-compositeur français d'origine congolaise, né le 4 décembre 1999 à Bondy. Membre fondateur du collectif 4Keus, il se fait connaître avec des titres comme "Brodé à l'ancienne" et "La vie de rêve".</p>
+                    
+                    <h2>Parcours</h2>
+                    <p>Découvert avec le groupe 4Keus, Tiakola lance sa carrière solo en 2019. C'est avec le titre "Meuda" qu'il se fait véritablement connaître du grand public. Son style unique mêlant mélodies entraînantes et textes authentiques lui vaut une reconnaissance rapide du public et de la critique, faisant de lui l'une des révélations majeures du rap français.</p>
+                    
+                    <h2>Récompenses</h2>
+                    <ul>
+                        <li>5 titres certifiés Diamant</li>
+                        <li>4 titres certifiés Platine</li> 
+                        <li>3 titres certifiés Or</li>
+                        <li>Flamme de l’artiste masculin de l’année 2025</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <p>© 2025 Portfolio - Tous droits réservés</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
