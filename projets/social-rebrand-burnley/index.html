@@ -1,265 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Social Rebrand Burnley | Eyrox DZN</title>
-    <meta name="description" content="Refonte complète de l'identité visuelle pour les réseaux sociaux du Burnley FC. Création d'une charte graphique moderne et impactante." />
-    <link rel="icon" href="../../../assets/Logo.png" type="image/svg+xml" />
-    <link rel="stylesheet" href="../../../assets/styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Eyrox DZN</title>
     <style>
-      .project-header {
-        text-align: center;
-        margin-bottom: 3rem;
-        padding: 2rem 0;
-        background: linear-gradient(135deg, #6e0000 0%, #1a1a1a 100%);
-        border-radius: 8px;
-      }
-      
-      .project-title {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #fff;
-      }
-      
-      .project-subtitle {
-        font-size: 1.25rem;
-        color: #ccc;
-        max-width: 800px;
-        margin: 0 auto 2rem;
-      }
-      
-      .project-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-      
-      .project-section {
-        margin-bottom: 4rem;
-      }
-      
-      .project-section-title {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
-        color: #fff;
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-      
-      .project-section-title:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: #e30613;
-      }
-      
-      .project-description {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #bbb;
-        margin-bottom: 2rem;
-      }
-      
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
-      }
-      
-      .project-image {
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .project-image:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-      
-      .project-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      
-      .back-link {
-        display: inline-flex;
-        align-items: center;
-        color: #a0a0a0;
-        text-decoration: none;
-        margin-bottom: 2rem;
-        transition: color 0.2s ease;
-      }
-      
-      .back-link:hover {
-        color: #fff;
-      }
-      
-      .back-link svg {
-        margin-right: 0.5rem;
-      }
-      
-      @media (max-width: 768px) {
-        .project-title {
-          font-size: 2rem;
+        /* Variables */
+        :root {
+            --black: #000000;
+            --white: #ffffff;
         }
-        
-        .project-subtitle {
-          font-size: 1.1rem;
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .project-grid {
-          grid-template-columns: 1fr;
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-      }
+
+        header {
+            padding: 2.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .back-link::before {
+            content: '←';
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover::before {
+            transform: translateX(-5px);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .coming-soon {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
     </style>
-  </head>
-  <body>
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
-
-    <header class="header">
-      <div class="container">
-        <div class="header-inner">
-          <a class="brand" href="../../../index.html" aria-label="Accueil">
-            <img class="brand-logo" src="../../../assets/Logo.png" alt="Logo Eyrox DZN" />
-            <div class="brand-name">
-              <strong>Eyrox DZN</strong>
-              <span>Graphiste Sportif</span>
-            </div>
-          </a>
-
-          <nav class="nav" aria-label="Navigation principale">
-            <a href="../../../index.html">Accueil</a>
-            <a href="../../../avis.html">Avis clients</a>
-            <a href="../../../a-propos.html">À propos</a>
-          </nav>
-
-          <div class="header-actions">
-            <a class="btn btn--primary" href="../../travaux.html">Mes projets</a>
-            <button class="icon-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-button>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="mobile-panel" data-mobile-panel data-open="false" aria-label="Menu mobile">
-          <a href="../../../index.html">Accueil</a>
-          <a href="../../../avis.html">Avis clients</a>
-          <a href="../../../a-propos.html">À propos</a>
-        </div>
-      </div>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../travaux.html" class="back-link">Retour aux projets</a>
+        </nav>
     </header>
 
-    <main id="contenu">
-      <div class="container">
-        <a href="../../travaux.html" class="back-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Retour aux projets
-        </a>
-        
-        <header class="project-header">
-          <h1 class="project-title">Social Rebrand Burnley</h1>
-          <p class="project-subtitle">Refonte complète de l'identité visuelle pour les réseaux sociaux du Burnley FC</p>
-        </header>
-        
-        <div class="project-content">
-          <section class="project-section">
-            <h2 class="project-section-title">Le projet</h2>
-            <div class="project-description">
-              <p>Refonte complète de l'identité visuelle pour les réseaux sociaux du Burnley FC. L'objectif était de créer une charte graphique moderne, cohérente et impactante qui reflète l'identité du club tout en apportant une touche contemporaine pour séduire la communauté en ligne.</p>
-              <p>Le projet incluait la création de visuels pour les matchs, les joueurs, les annonces et les campagnes spéciales, avec une attention particulière portée à la cohérence visuelle sur l'ensemble des plateformes.</p>
-            </div>
-          </section>
-          
-          <section class="project-section">
-            <h2 class="project-section-title">Visuels matchday</h2>
-            <div class="project-description">
-              <p>Création d'une série de visuels pour les matchs à domicile et à l'extérieur, avec une attention particulière portée à la hiérarchie de l'information et à l'impact visuel.</p>
-            </div>
-            <div class="project-grid">
-              <div class="project-image">
-                <img src="burnley-match-1.jpg" alt="Visuel match Burnley vs Manchester United" />
-              </div>
-              <div class="project-image">
-                <img src="burnley-match-2.jpg" alt="Visuel match Burnley vs Liverpool" />
-              </div>
-              <div class="project-image">
-                <img src="burnley-match-3.jpg" alt="Visuel match Burnley vs Chelsea" />
-              </div>
-            </div>
-          </section>
-          
-          <section class="project-section">
-            <h2 class="project-section-title">Visuels joueurs</h2>
-            <div class="project-description">
-              <p>Mise en avant des joueurs clés avec des visuels dynamiques mettant en valeur leurs performances et leur personnalité.</p>
-            </div>
-            <div class="project-grid">
-              <div class="project-image">
-                <img src="burnley-player-1.jpg" alt="Visuel joueur du match" />
-              </div>
-              <div class="project-image">
-                <img src="burnley-player-2.jpg" alt="Portrait de joueur" />
-              </div>
-            </div>
-          </section>
-          
-          <section class="project-section">
-            <h2 class="project-section-title">Éléments graphiques</h2>
-            <div class="project-description">
-              <p>Création d'éléments graphiques réutilisables pour maintenir une identité visuelle cohérente sur l'ensemble des supports de communication.</p>
-            </div>
-            <div class="project-grid">
-              <div class="project-image">
-                <img src="burnley-elements-1.jpg" alt="Éléments graphiques Burnley" />
-              </div>
-              <div class="project-image">
-                <img src="burnley-elements-2.jpg" alt="Palette de couleurs et typographie" />
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
+    <main>
+        <div class="coming-soon">COMING SOON</div>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <small>© <span id="year"></span> Eyrox DZN. Tous droits réservés.</small>
-          <div class="inline" aria-label="Liens">
-            <a href="../../../avis.html">Avis clients</a>
-            <a href="../../../a-propos.html">À propos</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../../../assets/main.js"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      
-      // Gestion du menu mobile
-      const menuButton = document.querySelector('[data-menu-button]');
-      const mobilePanel = document.querySelector('[data-mobile-panel]');
-      
-      if (menuButton && mobilePanel) {
-        menuButton.addEventListener('click', () => {
-          const isOpen = mobilePanel.getAttribute('data-open') === 'true';
-          mobilePanel.setAttribute('data-open', !isOpen);
-          menuButton.setAttribute('aria-expanded', !isOpen);
-        });
-      }
-    </script>
-  </body>
+</body>
 </html>
